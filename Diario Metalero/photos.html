@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Diario Metalero</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="Css/style.css"/>
+
+
+  <style>
+  /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+  .row.content {height: 1500px}
+
+  /* Set gray background color and 100% height */
+  .sidenav {
+    background-color:black;
+    height: 100%;
+  }
+
+  /* Set black background color, white text and some padding */
+  footer {
+    background-color: red;
+    color: white;
+    padding: 15px;
+    position: fixed !important;
+    bottom:0px;
+  }
+
+  /* On small screens, set height to 'auto' for sidenav and grid */
+  @media screen and (max-width: 767px) {
+    .sidenav {
+      height: auto;
+      padding: 15px;
+    }
+    .row.content {height: auto;}
+  }
+  </style>
+</head>
+<body style="background-color:yellow">
+
+  <div class="container-fluid">
+    <div class="row content">
+      <div class="col-sm-12 col-md-3 col-xs-12 sidenav">
+        <h4>Diario Metalero</h4>
+        <ul class="nav nav-pills nav-stacked">
+          <li class="active"><a href="index.html">Home</a></li>
+          <li><a href="Generes.html">Generes</a></li>
+          <li><a href="Newalbums.html">New Albums</a></li>
+          <li><a href="Photos.html">Photos</a></li>
+          <li><a href="Juego.html">Juego</a></li>
+          <li><a href="Formulario.html">Formulario</a></li>
+        </ul><br>
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Search Blog..">
+          <span class="input-group-btn">
+            <button class="btn btn-default" type="button">
+              <span class="glyphicon glyphicon-search"></span>
+            </button>
+          </span>
+        </div>
+      </div>
+      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#img1"><img src="img\Alestorm.jpg"  class="img-responsive img-ruy"/></button>
+
+      <div class="modal fade" id="img1" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Alestorm</h4>
+            </div>
+            <div class="modal-body">
+              <p>
+                <img class="img-responsive" src="img\Alestorm.jpg"/>
+              </p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#img2"><img src="img\Arkona.jpg" class="img-responsive img-ruy "/></button>
+
+      <div class="modal fade" id="img2" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Arkona</h4>
+            </div>
+            <div class="modal-body">
+              <p>
+                <img class="img-responsive" src="img\Arkona.jpg"/>
+              </p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#img3"><img src="img\Brujeria.jpg"  class="img-responsive img-ruy"/></button>
+
+      <div class="modal fade" id="img3" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Brujeria</h4>
+            </div>
+            <div class="modal-body">
+              <p>
+                <img class="img-responsive" src="img\Brujeria.jpg"/>
+              </p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#img4"><img src="img\Behemoth.jpg"  class="img-responsive img-ruy"/></button>
+
+      <div class="modal fade" id="img4" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Behemoth</h4>
+            </div>
+            <div class="modal-body">
+              <p>
+                <img class="img-responsive" src="img\Behemoth.jpg"/>
+              </p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#img5"><img src="img\Amon Amarth.jpg"  class="img-responsive img-ruy"/></button>
+
+      <div class="modal fade" id="img5" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Amon Amarth</h4>
+            </div>
+            <div class="modal-body">
+              <p>
+                <img class="img-responsive" src="img\Amon Amarth.jpg"/>
+              </p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#img6"><img src="img\Dropckick.jpg"  class="img-responsive img-ruy"/></button>
+
+      <div class="modal fade" id="img6" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Dropckik</h4>
+            </div>
+            <div class="modal-body">
+              <p>
+                <img class="img-responsive" src="img\Dropckick.jpg"/>
+              </p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#img7"><img src="img\reno.jpg" class="img-responsive img-ruy"/></button>
+
+      <div class="modal fade" id="img7" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Reno</h4>
+            </div>
+            <div class="modal-body">
+              <p>
+                <img class="img-responsive" src="img\reno.jpg"/>
+              </p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#img8"><img src="img\Manowar.JPG" class="img-responsive img-ruy img-ruy"/></button>
+
+      <div class="modal fade" id="img8" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Manowar</h4>
+            </div>
+            <div class="modal-body">
+              <p>
+                <img class="img-responsive" src="img\Manowar.JPG"/>
+              </p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#img9"><img src="img\Sabaton.jpg" class="img-responsive img-ruy"/></button>
+
+      <div class="modal fade" id="img9" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Sabaton</h4>
+            </div>
+            <div class="modal-body">
+              <p>
+                <img class="img-responsive" src="img\Sabaton.jpg"/>
+              </p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#img10"><img src="img\Moonspell.jpg"  class="img-responsive img-ruy"/></button>
+
+      <div class="modal fade" id="img10" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Moonspell</h4>
+            </div>
+            <div class="modal-body">
+              <p>
+                <img class="img-responsive" src="img\Moonspell.jpg"/>
+              </p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#img11"><img src="img\Helheim.jpg"  class="img-responsive img-ruy"/></button>
+
+      <div class="modal fade" id="img11" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Helheim</h4>
+            </div>
+            <div class="modal-body">
+              <p>
+                <img class="img-responsive" src="img\Helheim.jpg"/>
+              </p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#img12"><img src="img\Real.jpg" class="img-responsive img-ruy"/></button>
+
+      <div class="modal fade" id="img12" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">The Real Mckenzies</h4>
+            </div>
+            <div class="modal-body">
+              <p>
+                <img class="img-responsive" src="img\Real.jpg"/>
+              </p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+
+<footer class="col-md-12">
+  <p>By Ruy Ortega Montesdeoca.</p>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

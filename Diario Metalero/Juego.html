@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Piedra, papel o tijera</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="js/juego.js"></script>
+	<script src="js/musica.js"></script>
+	<link rel="stylesheet" href="Css/style.css"/>
+<link rel="stylesheet" href="Css/juego.css">
+
+
+
+
+</head>
+
+<body onload="corrigeImagen();">
+	<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="brand" href="Index.html">
+					<img alt="" width="50" height="50" src="img/logo.png"></a>
+				</div>
+
+				<div class="collapse navbar-collapse" id="myNavbar">
+					<ul class="nav navbar-nav">
+						<li><a href="Index.html">Home</a></li>
+						<li><a href="Generes.html">Generos</a></li>
+						<li><a href="Juego.html">Juego</a></li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+								Otros <b class="caret"></b>
+							</a>
+							<ul class="dropdown-menu">
+								<li><a href="Newalbums.html">New albums </a></li>
+								<li><a href="photos.html">Photos</a></li>
+								<li><a href="Formulario.html">Formulario</a></li>
+							</ul>
+
+
+							<li class="dropdown">
+
+
+						</li>
+
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<div class="container" id="iniciar">
+
+			<h1 class="centrar" id="TituloJuego" onmouseover="Iluminar()" onmouseout="Apagar()">¿Piedra, papel o tijera?</h1>
+
+
+
+			<p id="wins"></p>
+			<p class="centrar">Selecciona lo que vas a elegir: </p>
+			<form name=elegido>
+
+				<div id="sitio1" >
+					<input type="Radio" name="eleccion" value="0" checked> PIEDRA
+					<br><br>
+					<img src="img/piedra.jpg" id="piedra"
+					alt="Piedra" onclick="document.elegido.eleccion[0].checked" >
+					<br>
+				</div>
+
+				<div id="sitio2">
+					<input type="Radio" name="eleccion" value="1" > PAPEL
+					<br><br>
+					<img src="img/papel.jpg" id="papel"
+					alt="papel" onclick="document.elegido.eleccion[1].checked" >
+					<br>
+				</div>
+
+				<div id="sitio3">
+					<input type="Radio" name="eleccion" value="2" > TIJERA
+					<br><br>
+					<img src="img/tijera.jpg" id="tijera"
+					alt="tijera" onclick="document.elegido.eleccion[2].checked">
+					<br>
+
+				</div>
+
+			<div id="primerbot">
+				<br><br>
+				<input type="Button" name="boton" value="Elegir" onclick="botonesEleccion()" class="center-block btn btn-danger">
+<br>
+				<input type="Button" id="ModoNoche" name="ModoNoche" value="Modo Noche" onclick="CambiarFondo()" class="center-block btn btn-success">
+			</div>
+			<br>
+
+			<div class="centrar seleccion" >
+				<p id="salida"></p>
+				<br>
+				<img src="img/nada.jpg" id="imagen" alt="aleatorio"/>
+				<br>
+			</div>
+
+			<div id="oculto" class="centrar" >
+				<p id="mensaje"></p>
+				<input type="button"  class="btn btn-warning" value="Reiniciar" name="iniciador" id="a" onclick="reinicio();" />
+				<br><br><br><br>
+			</div>
+			</form>
+		</div>
+		<div id="reproductorBox">
+		</div>
+
+		<div>
+		<select  id = "selectTrack" multiple onchange="cambiarTrack(this.options[this.selectedIndex]);">
+			<option path="musica/cancion.mp3">reno renardo</option>
+			<option path="musica/cancion2.mp3">Estentor</option>
+			<option path="musica/cancion3.mp3">20 Anhos</option>
+			<option path="musica/cancion4.mp3">Vals del obrero</option>
+		</select>
+		<script>cargarReproductor();</script>
+		</div>
+
+
+
+</body>
+</html>

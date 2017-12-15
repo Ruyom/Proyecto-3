@@ -1,0 +1,75 @@
+#primerbot input{
+  display: block;
+  text-align: center;
+}
+
+#wins {
+  text-align: center;
+}
+
+#oculto {
+  text-align: center;
+  float: left;
+  width: 100%;
+  display: none;
+}
+
+.centrar {
+  text-align: center;
+}
+
+#sitio1 {
+  width: 33%;
+  text-align: center;
+  float: left;
+  border:1px solid;
+}
+
+#sitio2 {
+  width: 33%;
+  text-align:center;
+  float: left;
+  border:1px solid;
+}
+
+#sitio3 {
+  width: 33%;
+  text-align: center;
+  float: left;
+  border:1px solid;
+}
+
+#piedra {
+  height: 150px;
+  width: 150px;
+  margin-top: 11px;
+}
+
+#papel {
+  height: 150px;
+  width: 150px;
+  margin-top: 11px;
+}
+
+#tijera {
+  height: 150px;
+  width: 150px;
+  margin-top: 11px;
+}
+
+
+#salida {
+  margin-top: 20px;
+}
+
+.seleccion {
+  text-align: center;
+  float: left;
+  width: 100%;
+}
+
+#imagen{
+  height: 200px;
+  width: 200px;
+  margin-top: 11px;
+}

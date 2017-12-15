@@ -1,0 +1,51 @@
+
+
+#generos {
+    margin-bottom:300px;
+    margin-top:100px;
+}
+
+.img-ruy {
+  max-width:400px !important;
+}
+
+#avisoNombre{
+  color: red;
+  display: none;
+}
+#avisoApellido{
+  color: red;
+  display: none;
+}
+#avisoEdad{
+  color: red;
+  display: none;
+}
+#avisoGenero{
+  color: red;
+  display: none;
+}
+#avisoPais{
+  color: red;
+  display: none;
+}
+#avisoUsuario{
+  color: red;
+  display: none;
+}
+#avisoTelefono{
+  color: red;
+  display: none;
+}
+#avisoCorreo{
+  color: red;
+  display: none;
+}
+#avisoContra {
+  display: none;
+  color: red;
+}
+#avisoDireccion {
+  display: none;
+  color: red;
+}

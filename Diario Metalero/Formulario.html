@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Registrate</title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/Formulario.js"></script>
+</head>
+<body>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="brand" href="Index.html">
+          <img alt="" width="50" height="50" src="img/logo.png"></a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li><a href="Index.html">Home</a></li>
+            <li><a href="Generes.html">Generos</a></li>
+            <li><a href="Juego.html">Juego</a></li>
+            <li><a href="Newalbums.html">New albums </a></li>
+            <li><a href="photos.html">Photos</a></li>
+
+            <li class="dropdown">
+
+            </ul>
+          </li>
+
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="panel panel-warning">
+
+    </div>
+    <form class="" action="index.html" method="get" id="Formulario">
+      <div class="form-group">
+        <label for="nombre">Nombre:</label>
+        <input type="text" class="form-control" id="nombre" name="nombre" maxlength="10" placeholder="Nombre"/>
+        <span id="avisoNombre">*No olvides poner tu nombre.</span>
+      </div>
+      <div class="form-group">
+        <label for="apellidos">Apellidos:</label>
+        <input type="text" id="apellidos" class="form-control" maxlength="20" placeholder="Apellidos"/>
+          <span id="avisoApellido">*No olvides poner tu apellido.</span>
+      </div>
+      <div class="form-group">
+        <label for="edad">Edad</label>
+        <input type="number" class="form-control" id="edad" name="edad" placeholder="Edad">
+          <span id="avisoEdad">*No olvides poner tu edad.</span>
+      </div>
+      <div class="form-group">
+        <label>Genero:</label>
+      </div>
+      <div class="radio" >
+        <label><input type="radio" id="hombre" name="genero">Hombre</label>
+      </div>
+      <div class="radio">
+        <label><input type="radio" id="mujer" name="genero">Mujer</label>
+          </div>
+        <span id="avisoGenero">*No olvides poner tu Genero.</span>
+      <div class="form-group">
+        <label for="usuario">Nombre de Usuario:</label>
+        <input type="text" id="usuario" class="form-control" maxlength="10" placeholder="Nombre de Usuario"/>
+          <span id="avisoUsuario">*No olvides poner tu nick.</span>
+      </div>
+      <div class="form-group">
+        <label for="contraseña">Contraseña</label>
+        <input type="password" class="form-control" id="contraseña" name="contraseña" placeholder="Contraseña">
+        <span id="avisoContra">* Las contraseñas no coinciden</span>
+      </div>
+      <div class="form-group">
+        <label for="repetir">Repetir contraseña</label>
+        <input type="password" class="form-control" id="repetir" name="repetir" placeholder="Repite contraseña">
+      </div>
+      <div class="form-group">
+        <label for="correo">Correo electronico:</label>
+        <input type="text" id="correo" class="form-control" maxlength="20" placeholder="Correo electronico"/>
+          <span id="avisoCorreo">*No olvides poner tu Correo.</span>
+      </div>
+      <div class="form-group">
+        <label for="telefono">Número de telefono:</label>
+        <input type="number" id="telefono" class="form-control" placeholder="Número de telefono"/>
+          <span id="avisoTelefono">*No olvides poner tu numero.</span>
+      </div>
+      <div class="form-group">
+        <label for="direccion">Dirección:</label>
+        <input type="text" id="direccion" class="form-control" maxlength="20" placeholder="Dirección"/>
+          <span id="avisoDireccion">*No olvides poner tu nombre.</span>
+      </div>
+      <div class="form-group">
+        <label for="Pais">Pais</label>
+        <select id="Pais" class="form-control">
+          <option disabled selected value>Pais</option>
+          <option value="España">España</option>
+          <option value="Francia">Francia</option>
+          <option value="Gran Bretaña">Gran Bretaña</option>
+          <option value="USA">USA</option>
+          <option value="Alemania">Alemania</option>
+          <option value="Portugal">Portugal</option>
+          <option value="Italia">Italia</option>
+          <option vlaue="Polonia">Polonia</option>
+          <option value="Rusia">Rusia</option>
+          <option value="Japon">Japon</option>
+          <option value="China">China</option>
+          <option value="Mexico">Mexico</option>
+          <option value="Argentina">Argentina</option>
+        </select>
+          <span id="avisoPais">*No olvides poner tu pais.</span>
+      </div>
+
+      <button type="submit" class="btn btn-success" name="Enviar">Enviar</button>
+      <button type="reset" class="btn btn-danger" name="Limpiar">Limpiar</button>
+    </form>
+  </div>
+</body>
+</html>

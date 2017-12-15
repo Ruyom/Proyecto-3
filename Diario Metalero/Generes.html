@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Diario Metalero</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="Css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+  .row.content {height: 1500px}
+
+  /* Set gray background color and 100% height */
+  .sidenav {
+    background-color:black;
+    height: 100%;
+  }
+
+  /* Set black background color, white text and some padding */
+  footer {
+    background-color: red;
+    color: white;
+    padding: 15px;
+  }
+
+  /* On small screens, set height to 'auto' for sidenav and grid */
+  @media screen and (max-width: 767px) {
+    .sidenav {
+      height: auto;
+      padding: 15px;
+    }
+    .row.content {height: auto;}
+  }
+  </style>
+</head>
+<body style="background-color:yellow" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+
+    <ul class="nav navbar-nav">
+      <li><a href="#generos">Section 1</a></li>
+      <li><a href="#subgeneros">Section 2</a></li>
+    </ul>
+  </nav>
+
+
+  <div class="container-fluid">
+    <div class="row content">
+      <div class="col-sm-3 sidenav">
+        <h4>Diario Metalero</h4>
+        <ul class="nav nav-pills nav-stacked">
+          <li class="active"><a href="index.html">Home</a></li>
+          <li><a href="Generes.html">Generes</a></li>
+          <li><a href="Newalbums.html">New Albums</a></li>
+          <li><a href="Photos.html">Photos</a></li>
+          <li><a href="Juego.html">Juego</a></li>
+          <li><a href="Formulario.html">Formulario</a></li>
+        </ul><br>
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Search Blog..">
+          <span class="input-group-btn">
+            <button class="btn btn-default" type="button">
+              <span class="glyphicon glyphicon-search"></span>
+            </button>
+          </span>
+        </div>
+      </div>
+
+
+      <div class="col-sm-9">
+        <div class="container">
+          <ul class="nav nav-pills">
+            <br/><br/><br/>
+            <li class="active"><a data-toggle="pill" href="#genero">Géneros</a></li>
+            <li><a data-toggle="pill" href="#subgenero">Subgéneros</a></li>
+          </ul>
+
+          <div class="tab-content">
+            <div id="genero" class="tab-pane fade in active">
+              <h2>Generos</h2>
+              <p>Diferentes Generos de Metal.</p>
+
+              <table class="table" id="generos">
+                <thead>
+                  <tr>
+                    <th>Genero</th>
+                    <th>Banda</th>
+                    <th>Link de biografia</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Folk Metal/Power Metal</td>
+                    <td>Alestorm</td>
+                    <td><a href="https://www.metal-archives.com/bands/Alestorm/116989" target="_blank">click aqui</td>
+                    </tr>
+                    <tr class="success">
+                      <td>Power Metal</td>
+                      <td>Sabaton</td>
+                      <td><a href="https://www.metal-archives.com/bands/Sabaton/484" target="_blank">click aqui</td>
+                      </tr>
+                      <tr class="danger">
+                        <td>Freak Metal</td>
+                        <td>El Reno Renardo</td>
+                        <td><a href="https://www.metal-archives.com/bands/El_Reno_Renardo/3540357463" target="_blank">click aqui</td>
+                        </tr>
+                        <tr class="info">
+                          <td>Black Metal/Pagan Metal</td>
+                          <td>Moonspell</td>
+                          <td><a href="https://www.metal-archives.com/bands/Moonspell/61" target="_blank">click aqui</td>
+                          </tr>
+                          <tr class="warning">
+                            <td>Pagan Metal</td>
+                            <td>Arkona</td>
+                            <td><a href="https://www.metal-archives.com/bands/%D0%90%D1%80%D0%BA%D0%BE%D0%BD%D0%B0/26171" target="_blank">click aqui</td>
+                            </tr>
+                            <tr class="active">
+                              <td>Heavy Metal</td>
+                              <td>Black Sabbath</td>
+                              <td><a href="https://www.metal-archives.com/bands/Black_Sabbath/99" target="_blank">click aqui</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <div id="subgenero" class="tab-pane fade">
+                          <h2>SubGeneros</h2>
+                          <p>Más Generos y bandas.</p></div>
+                          <table class="table" id="subgeneros">
+                            <thead>
+                              <tr>
+                                <th>Genero</th>
+                                <th>Nombre</th>
+                                <th>link de biografia</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>Death Metal</td>
+                                <td>Bloodbath</td>
+                                <td><a href="https://www.metal-archives.com/bands/Bloodbath/233" target="_blank">click aqui</td></td>
+                                </tr>
+                                <tr class="success">
+                                  <td>Black Metal, Ambient</td>
+                                  <td>Burzum</td>
+                                  <td><a href="https://www.metal-archives.com/bands/Burzum/88" target="_blank">click aqui</td></td>
+                                  </tr>
+                                  <tr class="danger">
+                                    <td>Death Metal/Grindcore</td>
+                                    <td>Brujeria</td>
+                                    <td><a href="https://www.metal-archives.com/bands/Brujeria/1347" target="_blank">click aqui</td></td>
+                                    </tr>
+                                    <tr class="info">
+                                      <td>Speed Metal</td>
+                                      <td>Dragonforce</td>
+                                      <td><a href="https://www.metal-archives.com/bands/DragonForce/2289" target="_blank">click aqui</td></td>
+                                      </tr>
+                                      <tr class="warning">
+                                        <td>Gothic Metal/Rock</td>
+                                        <td>Lacuna Coil</td>
+                                        <td><a href="https://www.metal-archives.com/bands/Lacuna_Coil/124" target="_blank">click aqui</td></td>
+                                        </tr>
+                                        <tr class="active">
+                                          <td>Symphonic Power Metal</td>
+                                          <td>Rhapsody of Fire</td>
+                                          <td><a href="https://www.metal-archives.com/bands/Rhapsody_of_Fire/32" target="_blank">click aqui</td></td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </div>
+                                  </div>
+                                </div>
+
+
+                                <footer class="container-fluid">
+                                  <p>By Ruy Ortega Montesdeoca.</p>
+                                </footer>
+
+                              </div>
+                            </div>
+                          </body>
+                          </html>
