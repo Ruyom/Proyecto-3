@@ -1,0 +1,8 @@
+strong {
+  color: green;
+  font-weight: bold;
+}
+.delete, .edit {
+width: 1em;
+height: 1em;
+}

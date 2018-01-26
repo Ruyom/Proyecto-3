@@ -3,9 +3,9 @@ var Formulario;
 var validar;
 
 function inicializar() {
-  Formulario = document.getElementById("Formulario");
-  Formulario.addEventListener("submit", validar);
-
+  inicializarFirebase();
+  document.getElementById("formulario").addEventListener("submit", registrarFirebase);
+  mostrarMensajes();
 }
 
 function validar(event) {
@@ -13,6 +13,8 @@ function validar(event) {
   if(Formulario.contraseña.value != Formulario.repetir.value){
     event.preventDefault();
     document.getElementById("avisoContra").style.display = "block";
+  } else {
+    document.getElementById("avisoContra").style.display = "none";
   }
   if(Formulario.nombre.value =="") {
     event.preventDefault();
@@ -68,4 +70,5 @@ function validar(event) {
   } else {
     document.getElementById("avisoPais").style.display = "none";
   }
+    event.preventDefault();
 }

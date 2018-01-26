@@ -1,4 +1,7 @@
-
+.delete, .edit {
+  width: 1em;
+  height: 1em;
+}
 
 #generos {
     margin-bottom:300px;
