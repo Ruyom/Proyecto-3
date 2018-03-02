@@ -18,122 +18,132 @@
 <body>
 
   <nav class="navbar navbar-inverse">
-		<div class="container-fluid">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<a class="brand" href="Index.html">
-					<img alt="" width="50" height="50" src="img/logo.png"></a>
-				</div>
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="brand" href="Index.html">
+          <img alt="" width="50" height="50" src="img/logo.png"></a>
+        </div>
 
-				<div class="collapse navbar-collapse" id="myNavbar">
-					<ul class="nav navbar-nav">
-						<li><a href="Index.html">Índice</a></li>
-						<li><a href="Generes.html">Géneros</a></li>
-						<li><a href="Juego.html">Juego</a></li>
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-								Otros <b class="caret"></b>
-							</a>
-							<ul class="dropdown-menu">
-								<li><a href="Newalbums.html">Nuevos albums </a></li>
-								<li><a href="photos.html">Fotos</a></li>
-								<li><a href="Formulario.html">Formulario</a></li>
-							</ul>
-
-
-							<li class="dropdown">
-
-
-						</li>
-
-					</ul>
-					<ul class="nav navbar-nav navbar-right">
-
-					</ul>
-				</div>
-			</div>
-		</nav>
-
-
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-5">
-        <form id="formulario" method="post">
-          <div class="form-group">
-            <label for="name">Nombre:</label>
-            <input type="text" name="name" value="" id="name" class="form-control">
-          </div>
-          <label>Género:</label>
-          <select name="genero" form="formulario">
-            <option value="power metal">Power Metal</option>
-            <option value="black metal">Black Metal</option>
-            <option value="gothic metal">Gothic Metal</option>
-            <option value="folk metal">Folk Metal</option>
-            <option value="freak metal">Freak Metal</option>
-            <option value="industrial metal">Industrial Metal</option>
-            <option value="heavy metal">Heavy Metal</option>
-          </select>
-          <div class="form-group">
-            <label for="fecha">Fecha:</label>
-            <input type="date" name="name" value="" id="fecha" class="form-control">
-          </div>
-          <div class="form-group">
-            <label for="pais">País:</label>
-            <select id="pais" class="form-control">
-              <option disabled selected value>Pais</option>
-              <option value="España">España</option>
-              <option value="Francia">Francia</option>
-              <option value="Gran Bretaña">Gran Bretaña</option>
-              <option value="USA">USA</option>
-              <option value="Alemania">Alemania</option>
-              <option value="Portugal">Portugal</option>
-              <option value="Italia">Italia</option>
-              <option value="Polonia">Polonia</option>
-              <option value="Rusia">Rusia</option>
-              <option value="Japon">Japon</option>
-              <option value="China">China</option>
-              <option value="Mexico">Mexico</option>
-              <option value="Argentina">Argentina</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label>Tipo:</label>
-            <br/><input type="radio" name="gender" value="Benefico">Benéfico
-            <br/><input type="radio" name="gender" value="No benefico">No benéfico
-          </div>
-          <div class="form-group">
-            <label>Horas:</label>
-            <input type="number" name="hours" class="form-control">
-          </div>
-          <div class="form-group">
-            <label>Correo Electronico para más informacion</label>
-            <input type="email" name="correo" class="form-control">
-          </div>
-          <button type="submit" name="button">Enviar</button>
-        </form>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li><a href="Index.html">Índice</a></li>
+            <li><a href="Generes.html">Géneros</a></li>
+            <li><a href="Juego.html">Juego</a></li>
+            <li><a href="Newalbums.html">Nuevos Albums</a></li>
+            <li><a href="Photos.html">Fotos</a></li>
+            <li><a href="tarifas.html">Tarifas</a></li>
+          </ul>
+        </div>
       </div>
-      <div class="col-sm-7">
-        <table>
-          <thead>
-            <tr>
-              <th>Nombre</th>
-              <th>Género</th>
-              <th>Pais</th>
-              <th>Tipo</th>
-              <th>Horas</th>
-              <th>Email</th>
-            </tr>
-          </thead>
-          <tbody id="Conciertos">
-          </tbody>
-        </table>
-        <!--Aquí van los mensajes-->
+    </nav>
+
+
+
+
+
+    <ul class="nav navbar-nav navbar-right">
+
+    </ul>
+
+
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-5">
+          <form id="formulario">
+            <div class="form-group">
+              <label for="name">Nombre:</label>
+              <input type="text" name="name" id="name" class="form-control"/>
+            </div>
+            <div id="avisoNombre">Te odio Ruy.</div>
+            <label>Género:</label>
+            <select name="genero" form="formulario">
+              <option value="">Seleccione una</option>
+              <option value="power metal">Power Metal</option>
+              <option value="black metal">Black Metal</option>
+              <option value="gothic metal">Gothic Metal</option>
+              <option value="folk metal">Folk Metal</option>
+              <option value="freak metal">Freak Metal</option>
+              <option value="industrial metal">Industrial Metal</option>
+              <option value="heavy metal">Heavy Metal</option>
+            </select>
+            <div id="avisoGenero">aviso Genero.</div>
+            <div class="form-group">
+              <label for="fecha">Fecha:</label>
+              <input type="date" name="fecha" value="" id="fecha" class="form-control">
+              <div id="avisoFecha">aviso Fecha.</div>
+            </div>
+            <div class="form-group">
+              <label for="pais">País:</label>
+              <select id="pais" class="form-control">
+                <option disabled selected value>Pais</option>
+                <option value="España">España</option>
+                <option value="Francia">Francia</option>
+                <option value="Gran Bretaña">Gran Bretaña</option>
+                <option value="USA">USA</option>
+                <option value="Alemania">Alemania</option>
+                <option value="Portugal">Portugal</option>
+                <option value="Italia">Italia</option>
+                <option value="Polonia">Polonia</option>
+                <option value="Rusia">Rusia</option>
+                <option value="Japon">Japon</option>
+                <option value="China">China</option>
+                <option value="Mexico">Mexico</option>
+                <option value="Argentina">Argentina</option>
+              </select>
+              <div id="avisoPais">aviso País.</div>
+            </div>
+            <div class="form-group">
+              <label>Tipo:</label>
+              <br/><input type="radio" name="gender" value="Benefico">Benéfico
+              <br/><input type="radio" name="gender" value="No benefico">No benéfico
+              <div id="avisoGener">Aviso Genero.</div>
+            </div>
+            <div class="form-group">
+              <label>Horas:</label>
+              <input type="number" name="hours" class="form-control">
+              <div id="avisoHoras">Aviso horas.</div>
+            </div>
+            <div class="form-group">
+              <label>Correo Electronico para más informacion</label>
+              <input type="email" name="correo" class="form-control">
+              <div id="avisoEmail">Aviso Email.</div>
+            </div>
+            <div class="form-group">
+              <label>Tarifa</label><br/>
+              <select name="SeleccionarTarifa" id="seleccionarTarifa">
+                <option value="">Seleccione una</option>
+              </select>
+              <div id="avisoTarifa">Aviso Tarifa.</div>
+            </div>
+            <button type="submit" name="button">Enviar</button>
+          </form>
+        </div>
+        <div class="col-sm-7">
+          <table>
+            <thead>
+              <tr>
+                <th>Nombre</th>
+                <th>Género</th>
+                <th>Tipo</th>
+                <th>Pais</th>
+                <th>Tipo</th>
+                <th>Horas</th>
+                <th>Email</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody id="Conciertos">
+            </tbody>
+          </table>
+          <!--Aquí van los mensajes-->
+        </div>
       </div>
     </div>
-  </div>
-</body>
-</html>
+  </body>
+  </html>

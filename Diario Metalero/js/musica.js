@@ -1,5 +1,5 @@
 function cambiarTrack(track) {
-  var path =  track.getAttribute("path")
+  var path =  track.getAttribute("data-path")
   viejo_audio = document.getElementById("reproductor")
 
   audio_padre = viejo_audio.parentNode
@@ -21,7 +21,7 @@ function cambiarTrack(track) {
 
 function cargarReproductor() {
   var select = document.getElementById("selectTrack")
-  var path = select.options[0].getAttribute("path")
+  var path = select.options[0].getAttribute("data-path")
 
   nuevo_audio = document.createElement("audio")
   nuevo_audio.setAttribute("id","reproductor")

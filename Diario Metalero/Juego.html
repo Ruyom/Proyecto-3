@@ -35,6 +35,7 @@
 						<li><a href="Index.html">Índice</a></li>
 						<li><a href="Generes.html">Géneros</a></li>
 						<li><a href="Juego.html">Juego</a></li>
+						<li><a href="tarifas.html">Tarifas</a></li>
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 								Otros <b class="caret"></b>
@@ -42,7 +43,7 @@
 							<ul class="dropdown-menu">
 								<li><a href="Newalbums.html">Nuevos albums </a></li>
 								<li><a href="photos.html">Fotos</a></li>
-								<li><a href="Formulario.html">Formulario</a></li>
+								<li><a href="concierto.html">Concierto</a></li>
 								<li><a href="concierto.html">Concierto</a></li>
 							</ul>
 
@@ -120,11 +121,11 @@
 		</div>
 
 		<div>
-		<select  id = "selectTrack" multiple onchange="cambiarTrack(this.options[this.selectedIndex]);">
-			<option path="musica/cancion.mp3">CTRL+ALT+SUPR</option>
-			<option path="musica/cancion2.mp3">Esténtor</option>
-			<option path="musica/cancion3.mp3">20 Anhos</option>
-			<option path="musica/cancion4.mp3">Vals del obrero</option>
+		<select id = "selectTrack" multiple onchange="cambiarTrack(this.options[this.selectedIndex]);">
+			<option data-path="musica/cancion.mp3">CTRL+ALT+SUPR</option>
+			<option data-path="musica/cancion2.mp3">Esténtor</option>
+			<option data-path="musica/cancion3.mp3">20 Anhos</option>
+			<option data-path="musica/cancion4.mp3">Vals del obrero</option>
 		</select>
 		<script>cargarReproductor();</script>
 		</div>

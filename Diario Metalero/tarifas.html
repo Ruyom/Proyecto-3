@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
+  <script src="js/tarifas.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <title>Tarifas</title>
+
+  <style>
+  .edit, .delete {width:20px;}
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="brand" href="Index.html">
+          <img alt="" width="50" height="50" src="img/logo.png"></a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li><a href="Index.html">Índice</a></li>
+            <li><a href="Generes.html">Géneros</a></li>
+            <li><a href="Juego.html">Juego</a></li>
+            <li><a href="Newalbums.html">Nuevos Albums </a></li>
+            <li><a href="photos.html">Fotos</a></li>
+            <li><a href="concierto.html">Concierto</a></li>
+            <li><a href="tarifas.html">Tarifas</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+
+    <div class="container">
+      <div class="row">
+
+
+        <form id="formularioTarifas">
+          <h1>Tarifas:</h1>
+
+          <label for="Name" class="form-group">Nombre:</label>
+          <input type="text" class="form-control" name="Name" id="Name"/><br/>
+          <div id="avisoNombre">Aviso Nombre.</div>
+
+          <br/><br/>
+
+          <label for="price">Precio:</label>
+          <input type="number" name="price" id="price"/><br/><br/>
+          <div id="avisoPrecio">Aiso Precio.</div>
+
+          <button type="submit" class="btn btn-success" id="submitTarifas">Submit</button>
+        </form>
+
+<br/><br/><br/>
+        <div>
+          <table>
+            <thead>
+              <tr>
+                <th>Nombre:</th>
+                <th>Precio:</th>
+                <th>Opciones:</th>
+              </tr>
+            </thead>
+            <tbody id="datosTarifas">
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </div>
+
+  </body>
+  </html>

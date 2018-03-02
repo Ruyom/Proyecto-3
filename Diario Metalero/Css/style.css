@@ -52,3 +52,19 @@
   display: none;
   color: red;
 }
+#avisoGener {
+  display: none;
+  color: red;
+}
+#avisoEmail {
+  display: none;
+  color: red;
+}
+#avisoTarifa {
+  display: none;
+  color: red;
+}
+#avisoPrecio {
+  display: none;
+  color: red;  
+}

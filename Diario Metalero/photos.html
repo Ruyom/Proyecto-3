@@ -8,62 +8,36 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="Css/style.css"/>
-
-
-  <style>
-  /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
-  .row.content {height: 1500px}
-
-  /* Set gray background color and 100% height */
-  .sidenav {
-    background-color:black;
-    height: 100%;
-  }
-
-  /* Set black background color, white text and some padding */
-  footer {
-    background-color: red;
-    color: white;
-    padding: 15px;
-    position: fixed !important;
-    bottom:0px;
-  }
-
-  /* On small screens, set height to 'auto' for sidenav and grid */
-  @media screen and (max-width: 767px) {
-    .sidenav {
-      height: auto;
-      padding: 15px;
-    }
-    .row.content {height: auto;}
-  }
-  </style>
 </head>
-<body style="background-color:yellow">
+<body>
 
-  <div class="container-fluid">
-    <div class="row content">
-      <div class="col-sm-12 col-md-3 col-xs-12 sidenav">
-        <h4>Diario Metalero</h4>
-        <ul class="nav nav-pills nav-stacked">
-          <li class="active"><a href="index.html">Índice</a></li>
-          <li><a href="Generes.html">Géneros</a></li>
-          <li><a href="Newalbums.html">New Albums</a></li>
-          <li><a href="Photos.html">Fotos</a></li>
-          <li><a href="Juego.html">Juego</a></li>
-          <li><a href="Formulario.html">Formulario</a></li>
-          <li><a href="concierto.html">concierto</a></li>
-        </ul><br>
-        <div class="input-group">
-          <input type="text" class="form-control" placeholder="Search Blog..">
-          <span class="input-group-btn">
-            <button class="btn btn-default" type="button">
-              <span class="glyphicon glyphicon-search"></span>
-            </button>
-          </span>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="brand" href="Index.html">
+          <img alt="" width="50" height="50" src="img/logo.png"></a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li><a href="Index.html">Índice</a></li>
+            <li><a href="Generes.html">Géneros</a></li>
+            <li><a href="Juego.html">Juego</a></li>
+            <li><a href="concierto.html">Concierto</a></li>
+            <li><a href="Newalbums.html">Nuevos Albums</a></li>
+            <li><a href="Photos.html">Fotos</a></li>
+            <li><a href="tarifas.html">Tarifas</a></li>
+          </ul>
         </div>
       </div>
-      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#img1"><img src="img\Alestorm.jpg"  class="img-responsive img-ruy"/></button>
+    </nav>
+
+      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#img1"><img src="img/Alestorm.jpg" alt="imagen 1" class="img-responsive img-ruy"/></button>
 
       <div class="modal fade" id="img1" role="dialog">
         <div class="modal-dialog">
@@ -74,7 +48,7 @@
             </div>
             <div class="modal-body">
               <p>
-                <img class="img-responsive" src="img\Alestorm.jpg"/>
+                <img class="img-responsive" alt="imagen 1" src="img/Alestorm.jpg"/>
               </p>
             </div>
             <div class="modal-footer">
@@ -84,7 +58,7 @@
 
         </div>
       </div>
-      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#img2"><img src="img\Arkona.jpg" class="img-responsive img-ruy "/></button>
+      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#img2"><img src="img/Arkona.jpg" alt="imagen 2" class="img-responsive img-ruy "/></button>
 
       <div class="modal fade" id="img2" role="dialog">
         <div class="modal-dialog">
@@ -95,7 +69,7 @@
             </div>
             <div class="modal-body">
               <p>
-                <img class="img-responsive" src="img\Arkona.jpg"/>
+                <img class="img-responsive" alt="imagen 2"   src="img/Arkona.jpg"/>
               </p>
             </div>
             <div class="modal-footer">
@@ -106,7 +80,7 @@
         </div>
       </div>
 
-      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#img3"><img src="img\Brujeria.jpg"  class="img-responsive img-ruy"/></button>
+      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#img3"><img src="img/Brujeria.jpg" alt="imagen 3" class="img-responsive img-ruy"/></button>
 
       <div class="modal fade" id="img3" role="dialog">
         <div class="modal-dialog">
@@ -117,7 +91,7 @@
             </div>
             <div class="modal-body">
               <p>
-                <img class="img-responsive" src="img\Brujeria.jpg"/>
+                <img class="img-responsive" alt="imagen 3" src="img/Brujeria.jpg"/>
               </p>
             </div>
             <div class="modal-footer">
@@ -128,7 +102,7 @@
         </div>
       </div>
 
-      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#img4"><img src="img\Behemoth.jpg"  class="img-responsive img-ruy"/></button>
+      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#img4"><img src="img/Behemoth.jpg" alt="imagen 4" class="img-responsive img-ruy"/></button>
 
       <div class="modal fade" id="img4" role="dialog">
         <div class="modal-dialog">
@@ -139,7 +113,7 @@
             </div>
             <div class="modal-body">
               <p>
-                <img class="img-responsive" src="img\Behemoth.jpg"/>
+                <img class="img-responsive" alt="imagen 4" src="img/Behemoth.jpg"/>
               </p>
             </div>
             <div class="modal-footer">
@@ -150,7 +124,7 @@
         </div>
       </div>
 
-      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#img5"><img src="img\Amon Amarth.jpg"  class="img-responsive img-ruy"/></button>
+      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#img5"><img src="img/AmonAmarth.jpg" alt="imagen 5" class="img-responsive img-ruy"/></button>
 
       <div class="modal fade" id="img5" role="dialog">
         <div class="modal-dialog">
@@ -161,7 +135,7 @@
             </div>
             <div class="modal-body">
               <p>
-                <img class="img-responsive" src="img\Amon Amarth.jpg"/>
+                <img class="img-responsive" alt="imagen 5" src="img/AmonAmarth.jpg">
               </p>
             </div>
             <div class="modal-footer">
@@ -172,7 +146,7 @@
         </div>
       </div>
 
-      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#img6"><img src="img\Dropckick.jpg"  class="img-responsive img-ruy"/></button>
+      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#img6"><img src="img/Dropckick.jpg" alt="imagen 6" class="img-responsive img-ruy"/></button>
 
       <div class="modal fade" id="img6" role="dialog">
         <div class="modal-dialog">
@@ -183,7 +157,7 @@
             </div>
             <div class="modal-body">
               <p>
-                <img class="img-responsive" src="img\Dropckick.jpg"/>
+                <img class="img-responsive" alt="imagen 6" src="img/Dropckick.jpg"/>
               </p>
             </div>
             <div class="modal-footer">
@@ -194,7 +168,7 @@
         </div>
       </div>
 
-      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#img7"><img src="img\reno.jpg" class="img-responsive img-ruy"/></button>
+      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#img7"><img src="img/reno.jpg" alt="imagen 7" class="img-responsive img-ruy"/></button>
 
       <div class="modal fade" id="img7" role="dialog">
         <div class="modal-dialog">
@@ -205,7 +179,7 @@
             </div>
             <div class="modal-body">
               <p>
-                <img class="img-responsive" src="img\reno.jpg"/>
+                <img class="img-responsive"  alt="imagen 7" src="img/reno.jpg"/>
               </p>
             </div>
             <div class="modal-footer">
@@ -216,7 +190,7 @@
         </div>
       </div>
 
-      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#img8"><img src="img\Manowar.JPG" class="img-responsive img-ruy img-ruy"/></button>
+      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#img8"><img src="img/Manowar.JPG" alt="imagen 8" class="img-responsive img-ruy img-ruy"/></button>
 
       <div class="modal fade" id="img8" role="dialog">
         <div class="modal-dialog">
@@ -227,7 +201,7 @@
             </div>
             <div class="modal-body">
               <p>
-                <img class="img-responsive" src="img\Manowar.JPG"/>
+                <img class="img-responsive" alt="imagen 8" src="img/Manowar.JPG"/>
               </p>
             </div>
             <div class="modal-footer">
@@ -237,7 +211,7 @@
         </div>
       </div>
 
-      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#img9"><img src="img\Sabaton.jpg" class="img-responsive img-ruy"/></button>
+      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#img9"><img src="img/Sabaton.jpg" alt="imagen 9" class="img-responsive img-ruy"/></button>
 
       <div class="modal fade" id="img9" role="dialog">
         <div class="modal-dialog">
@@ -248,7 +222,7 @@
             </div>
             <div class="modal-body">
               <p>
-                <img class="img-responsive" src="img\Sabaton.jpg"/>
+                <img class="img-responsive" alt="imagen 9" src="img/Sabaton.jpg"/>
               </p>
             </div>
             <div class="modal-footer">
@@ -259,7 +233,7 @@
         </div>
       </div>
 
-      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#img10"><img src="img\Moonspell.jpg"  class="img-responsive img-ruy"/></button>
+      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#img10"><img src="img/Moonspell.jpg" alt="imagen 10" class="img-responsive img-ruy"/></button>
 
       <div class="modal fade" id="img10" role="dialog">
         <div class="modal-dialog">
@@ -270,7 +244,7 @@
             </div>
             <div class="modal-body">
               <p>
-                <img class="img-responsive" src="img\Moonspell.jpg"/>
+                <img class="img-responsive" alt="imagen 10" src="img/Moonspell.jpg"/>
               </p>
             </div>
             <div class="modal-footer">
@@ -281,7 +255,7 @@
         </div>
       </div>
 
-      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#img11"><img src="img\Helheim.jpg"  class="img-responsive img-ruy"/></button>
+      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#img11"><img src="img/Helheim.jpg" alt="imagen 11" class="img-responsive img-ruy"/></button>
 
       <div class="modal fade" id="img11" role="dialog">
         <div class="modal-dialog">
@@ -292,7 +266,7 @@
             </div>
             <div class="modal-body">
               <p>
-                <img class="img-responsive" src="img\Helheim.jpg"/>
+                <img class="img-responsive" alt="imagen 11" src="img/Helheim.jpg"/>
               </p>
             </div>
             <div class="modal-footer">
@@ -303,7 +277,7 @@
         </div>
       </div>
 
-      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#img12"><img src="img\Real.jpg" class="img-responsive img-ruy"/></button>
+      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#img12"><img src="img/Real.jpg"  alt="imagen 12" class="img-responsive img-ruy"/></button>
 
       <div class="modal fade" id="img12" role="dialog">
         <div class="modal-dialog">
@@ -314,7 +288,7 @@
             </div>
             <div class="modal-body">
               <p>
-                <img class="img-responsive" src="img\Real.jpg"/>
+                <img class="img-responsive" alt="imagen 12" src="img/Real.jpg"/>
               </p>
             </div>
             <div class="modal-footer">
@@ -324,27 +298,6 @@
 
         </div>
       </div>
-
-    </div>
-  </div>
-</div>
-</div>
-
-
-
-
-<footer class="col-md-12">
-  <p>By Ruy Ortega Montesdeoca.</p>
-</footer>
-
-
-
-
-
-
-
-
-
 
 
 

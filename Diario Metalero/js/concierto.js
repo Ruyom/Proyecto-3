@@ -22,16 +22,17 @@ function inicializarFirebase(){
 function mostrarMensajes() {
   var refMensajes = firebase.database().ref().child("Conciertos");
   refMensajes.on("value", cargarDatos);
+  refMensajes = firebase.database().ref().child("Tarifas");
+  refMensajes.on("value", cargarTarifas);
 }
 
 function cargarDatos(snapshot) {
   var datos = snapshot.val();
   var allMessages = "";
   for (var key in datos) {
-    allMessages = allMessages + '<tr><td><img class="delete" src="img/images.png" alt="borrar" data-identificador="' + key + '"/>'
-    + datos[key].Nombre + '</td><td>' + datos[key].Genero + '</td><td>'+ datos[key].Fecha + '</td><td>' + datos[key].Pais
+    allMessages = allMessages + '<tr><td>' + datos[key].Nombre + '</td><td>' + datos[key].Genero+ '</td><td>' + datos[key].Tipo + '</td><td>'+ datos[key].Fecha + '</td><td>' + datos[key].Pais
     + '</td><td>' + datos[key].tipos + '</td><td>' + datos[key].Horas + '</td><td>' + datos[key].Email
-    + '<img class="edit" src="img/images.png" alt="editar" data-identificador="' + key + '"/></p>';
+    + '</td><td><img class="delete" src="img/delete.png" alt="borrar" data-identificador="' + key + '"/>' + '<img class="edit" src="img/edit.png" alt="editar" data-identificador="' + key + '"/></td></tr>';
   }
   document.getElementById("Conciertos").innerHTML = allMessages;
 
@@ -43,20 +44,118 @@ function cargarDatos(snapshot) {
   }
 }
 
+
+function cargarTarifas(snapshot) {
+  var datos = snapshot.val();
+  var datosMostrados = "";
+
+  for (var key in datos){
+    datosMostrados += '<option value="' + datos[key].Nombre + '">' + datos[key].Nombre +
+    ' (' + datos[key].Precio + ')</option>';
+  }
+  document.getElementById("seleccionarTarifa").innerHTML += datosMostrados;
+
+  var EntidadesBorrar = document.getElementsByClassName("delete");
+  var EntidadesEditar = document.getElementsByClassName("edit");
+  for (var i = 0; i < EntidadesBorrar.length; i++) {
+    EntidadesBorrar[i].addEventListener("click", borrarMensaje);
+    EntidadesEditar[i].addEventListener("click", editarMensaje);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function registrarFirebase() {
   event.preventDefault();
   var database = firebase.database();
   var introduceRef = database.ref('Conciertos');
   var data = {}
-  data.Nombre = document.getElementById("name").value;
-  data.Genero = formulario.genero.value;
-  data.Fecha = document.getElementById("fecha").value;
-  data.Pais = document.getElementById("pais").value;
-  data.Tipo = formulario.gender.value;
-  data.Horas = formulario.hours.value;
-  data.Email = formulario.correo.value;
-  introduceRef.on('value', gotData, errData);
-  introduceRef.push(data);
+  var comprobacion = 0;
+  var formulario = document.getElementById('formulario');
+
+  if (formulario.name.value == '') {
+    document.getElementById('avisoNombre').style.display = "block";
+  } else {
+    comprobacion++;
+    document.getElementById('avisoNombre').style.display = "none";
+  }
+
+  if (formulario.genero.value == '') {
+    document.getElementById('avisoGenero').style.display = "block";
+  } else {
+    comprobacion++;
+    document.getElementById('avisoGenero').style.display = "none";
+  }
+
+  if (formulario.fecha.value == '') {
+    document.getElementById('avisoFecha').style.display = "block";
+  } else {
+    comprobacion++;
+    document.getElementById('avisoFecha').style.display = "none";
+  }
+
+  if (formulario.pais.value == '') {
+    document.getElementById('avisoPais').style.display = "block";
+  } else {
+    comprobacion++;
+    document.getElementById('avisoPais').style.display = "none";
+  }
+
+  if (formulario.gender.value == '') {
+    document.getElementById('avisoGener').style.display = "block";
+  } else {
+    comprobacion++;
+    document.getElementById('avisoGener').style.display = "none";
+  }
+
+  if (formulario.hours.value == '') {
+    document.getElementById('avisoHoras').style.display = "block";
+  } else {
+    comprobacion++;
+    document.getElementById('avisoHoras').style.display = "none";
+  }
+
+  if (formulario.correo.value == '') {
+    document.getElementById('avisoEmail').style.display = "block";
+  } else {
+    comprobacion++;
+    document.getElementById('avisoEmail').style.display = "none";
+  }
+
+  if (formulario.SeleccionarTarifa.value == '') {
+    document.getElementById('avisoTarifa').style.display = "block";
+  } else {
+    comprobacion++;
+    document.getElementById('avisoTarifa').style.display = "none";
+  }
+
+  console.log(comprobacion);
+
+
+  if (comprobacion == 8) {
+    data.Nombre = document.getElementById("name").value;
+    data.Genero = formulario.genero.value;
+    data.Fecha = document.getElementById("fecha").value;
+    data.Pais = document.getElementById("pais").value;
+    data.Tipo = formulario.gender.value;
+    data.Horas = formulario.hours.value;
+    data.Email = formulario.correo.value;
+    introduceRef.on('value', gotData, errData);
+    introduceRef.push(data);
+  }
 }
 
 
@@ -78,7 +177,7 @@ function errData(err) {
 
 
 
-/*
+
 function borrarMensaje() {
   var clave = this.getAttribute("data-identificador");
   var refMensajes = firebase.database().ref().child("Conciertos").child(clave);
@@ -90,11 +189,15 @@ function editarMensaje() {
   var refMensajes = firebase.database().ref().child("Conciertos").child(clave);
   //  refMensajes.update();
   refMensajes.once("value", function(snapshot){
-    var datos = snapshot.val();
+    var data = snapshot.val();
     var Formulario = document.getElementById("formulario");
-    Formulario.name.value = datos.nombre;
-    Formulario.message.value = datos.mensaje
+
+    document.getElementById("name").value = data.Nombre;
+    Formulario.genero.value = data.Genero;
+    document.getElementById("fecha").value = data.Fecha;
+    document.getElementById("pais").value = data.Pais;
+    Formulario.gender.value = data.Tipo;
+    Formulario.hours.value = data.Horas;
+    Formulario.correo.value = data.Email;
   });
 }
-
-*/
